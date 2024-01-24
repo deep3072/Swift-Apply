@@ -18,5 +18,7 @@ class Job(models.Model):
     ideal_candidate = models.TextField()
     salary = models.PositiveIntegerField(default=60000)
     location = models.CharField(max_length=100)
+    is_available = models.BooleanField(default=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
     def ___str__(self):
         return self.title
